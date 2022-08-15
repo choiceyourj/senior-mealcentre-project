@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+#  경기도 내 어르신 무료 급식소 project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+- 경기도 내 무료 급식소 현황들을 알아보고 운영안내 등 을 살펴볼 수 있습니다.
+- 지역별로 카테고리를 나누어 지역별 무료 급식소 현황들을 찾아 볼 수 있습니다.
+- 지도에서 무료 급식소를 찾아볼 수 있습니다.
 
-## Available Scripts
+## How to start project
+Local 환경에서 실행하는 것을 가정했을 때 필요한 것들   
+  ```
+  1 Firebase API Key
+  https://console.firebase.google.com/?hl=ko 로 접속하여 API Key를 생성
 
-In the project directory, you can run:
+  2 공공 api key 인증 받고 생성
+  https://data.gg.go.kr/portal/mainPage.do 경기데이터드림사이트에 접속
+  
+  3. 카카오 맵 api key 인증 받고 생성
+  https://apis.map.kakao.com/ 카카오 맵 api 사이트에 접속
 
-### `npm start`
+  #3 npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  #4 npm start
+  ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 해당 프로젝트를 만든 이유
 
-### `npm test`
+경기도 내 가정형편이 어렵거나 부득이한 사정으로 식사를 거를 우려가 있는 60세 이상 노인 어르신들에게 서비스를 제공하는 시설을 안내를 제공하는 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+서비스 사이트가 찾기 쉽지 않다는 것을 알고 이러한 프로젝트를 진행하게 되었습니다. 
 
-### `npm run build`
+## Project Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. 지역별 리스트
+React match parameter 통하여 지역코드로 카테고리 구분하여 해당 공공 api를 props로 전달받아 각 개체를 item을 통해 Dom 위에 렌더링 합니다. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. 카카오 맵으로 지도에서 찾기
+카카오 맵 api를 불러와 키워드로 검색이 가능하게 키워드 검색 기능을 추가하여 해당 키워드로 검색 시 검색 리스트가 나올 수 있게 구현하였습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 프로젝트 완성 후 소감
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+공공 API 를 활용하여 React를 공부하고자 만든 사이트라 디자인 부분에서 많이 부족하고 신경을 못 썼지만, 
+API 해당 문서를 이해하고 직접 발급받은 API KEY를 사용하여 데이터를 불러오는 뿌듯한 경험을 할 수 있었습니다. 
+시간 관계상 구현하지 못해 아쉬운 부분이 많이 남았지만 조금 더 실력을 키워 더 완성도 있는 프로젝트를 구현하고자 합니다.
